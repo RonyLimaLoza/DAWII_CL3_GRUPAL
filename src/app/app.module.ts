@@ -8,24 +8,33 @@ import { SolucionesComponent } from './soluciones/soluciones.component';
 import { PromedioComponent } from './soluciones/promedio/promedio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MarcaListaComponent } from './soluciones/marca/marca-lista/marca-lista.component';
+import { CategoriaListaComponent } from './soluciones/categoria/categoria-lista/categoria-lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SolucionesComponent,
-    PromedioComponent
+    PromedioComponent,
+    MarcaListaComponent,
+    CategoriaListaComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot([
       {path: 'soluciones', component: SolucionesComponent,
       children: [
         {path: 'home', component: HomeComponent},
-        {path: 'promedio', component:PromedioComponent}]
+        {path: 'promedio', component:PromedioComponent},
+        {path: 'marca', component:MarcaListaComponent},
+        {path: 'categoria', component:CategoriaListaComponent}
+      ]
       
     }
     ]),

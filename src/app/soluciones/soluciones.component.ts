@@ -18,11 +18,11 @@ irPaginaHome(): void{
 irPaginaPromedio(): void{
   this.router.navigate(['promedio'], {relativeTo: this.route});
 }
-irPaginaLista01(): void{
-  this.router.navigate(['lista01'], {relativeTo: this.route});
+irPaginaMarca(): void{
+  this.router.navigate(['marca'], {relativeTo: this.route});
 }
-irPaginaLista02(): void{
-  this.router.navigate(['lista02'], {relativeTo: this.route});
+irPaginaCategoria(): void{
+  this.router.navigate(['categoria'], {relativeTo: this.route});
 }
 
 }
